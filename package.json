@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+  "client-install": "npm install --prefix client",
   "client": "cd src/client && npm start",
   "server": "cd src/server && npm start",
   "start": "concurrently - kill-others \"npm run server\" \"npm run client\"",
