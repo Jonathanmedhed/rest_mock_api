@@ -1,5 +1,6 @@
 import { createApp } from "./config/app";
 
+
 (async () => {
 
     const app = await createApp();
