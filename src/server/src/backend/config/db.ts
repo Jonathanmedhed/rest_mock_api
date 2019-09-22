@@ -1,10 +1,5 @@
 import { createConnection } from "typeorm";
-import { User } from "../entities/user";
-import { Order } from "../entities/order";
-import { Product } from "../entities/product";
-import { Supplier } from "../entities/supplier";
-import { OrderProduct } from "../entities/orderproduct";
-import { OrderSupplier } from "../entities/ordersupplier";
+import { Employee } from "../entities/employee";
 
 export async function createDbConnection() {
 
@@ -40,12 +35,7 @@ export async function createDbConnection() {
         password: DATABASE_PASSWORD,
         database: DATABASE_DB,
         entities: [
-            User,
-            Order,
-            Product,
-            Supplier,
-            OrderProduct,
-            OrderSupplier
+            Employee
         ],
         synchronize: true
     });

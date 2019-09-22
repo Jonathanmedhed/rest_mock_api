@@ -3,16 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Login } from './pages/login';
 import { PageHeader } from "./components/page_header/page_header";
 import { Home } from './pages/home';
-import { Register } from './pages/register';
-import { NewOrder } from './pages/neworder';
-import { ConfirmOrder } from './pages/confirmorder';
-import { SuppliersPage } from './pages/supplierspage';
-import { Favourites } from './pages/favourites';
-import { AccountSettings } from './pages/accountsettings';
-import { OrderDetails } from './pages/orderdetails';
+import { EmployeesPage } from './pages/employeespage';
 
 ReactDOM.render(
     // This is the router component
@@ -40,16 +33,7 @@ ReactDOM.render(
                             pages in our single page web application
                         */
                     }
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/neworder" component={NewOrder} />
-                    <Route exact path="/neworder/:id" component={NewOrder} />
-                    <Route exact path="/confirmorder/:id" component={ConfirmOrder} />
-                    <Route exact path="/suppliers" component={SuppliersPage} />
-                    <Route exact path="/favourites" component={Favourites} />
-                    <Route exact path="/accountsettings" component={AccountSettings} />
-                    <Route exact path="/orderdetails/:id" component={OrderDetails} />
-                    <Route exact path="/login" component={Login} />
-                    <Route exact path="/register" component={Register} />
+                    <Route exact path="/" component={EmployeesPage} />
                 </Switch>
             </div>
         </div>
